@@ -87,7 +87,7 @@ final class FailureSummaryExtension implements Extension
                     return;
                 }
 
-                $out = PHP_EOL.'  Failed/Skipped Summary'.PHP_EOL;
+                $out = 'Failed/Skipped Summary:'.PHP_EOL;
 
                 if (! empty($this->entries->failures)) {
                     $out .= PHP_EOL.'  Failed:'.PHP_EOL;
