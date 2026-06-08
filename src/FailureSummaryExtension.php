@@ -112,11 +112,11 @@ final class FailureSummaryExtension implements Extension
 
     public static function prettifyName(string $name): string
     {
-        if (! str_starts_with($name, '__pest_evaluable__')) {
+        if (! str_starts_with($name, '__pest_evaluable_')) {
             return $name;
         }
 
-        $name = substr($name, strlen('__pest_evaluable__'));
+        $name = substr($name, strlen('__pest_evaluable_'));
 
         // Pest encodes Unicode chars as literal \u{XXXX} in PHP method names.
         // Decode them back to actual characters before further processing.
