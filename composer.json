@@ -2,7 +2,7 @@
     "name": "magicoli/pest-failure-summary",
     "description": "PHPUnit/Pest extension: concise failure and skipped summary after the test run",
     "type": "library",
-    "license": "MIT",
+    "license": "AGPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "Magicoli\\PestFailureSummary\\": "src/"
