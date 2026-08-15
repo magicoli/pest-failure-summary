@@ -10,32 +10,13 @@ Without it, failures are buried among hundreds of lines of output and you have t
 - Lists all **skipped** and **todo** tests with their reason
 - Outputs to `STDERR` so it is never captured by Pest's output buffering
 - Decodes Pest's internal method name encoding (`__pest_evaluable__`) into readable test names
-- Works with PHPUnit 10 and 11, Pest 2 and 3
+- Works with PHPUnit 10 to 13, Pest 2 to 5
 
 ## Installation
 
 ```bash
 composer require --dev magicoli/pest-failure-summary
 ```
-
-If the package is not on Packagist, add the repository to your `composer.json` first:
-
-```json
-"repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/magicoli/pest-failure-summary.git"
-    }
-],
-```
-
-Then:
-
-```bash
-composer require --dev magicoli/pest-failure-summary:dev-master
-```
-
-## Usage
 
 Register the extension in `phpunit.xml`:
 
