@@ -1,6 +1,7 @@
 {
 	"name": "magicoli/pest-failure-summary",
 	"description": "PHPUnit/Pest extension: concise failure and skipped summary after the test run",
+	"version": "1.0.0",
 	"type": "library",
 	"license": "AGPL-3.0-or-later",
 	"autoload": {
