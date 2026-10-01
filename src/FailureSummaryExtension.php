@@ -2,6 +2,7 @@
 
 namespace Magicoli\PestFailureSummary;
 
+use PHPUnit\Event\EventFacadeIsSealedException;
 use PHPUnit\Event\Test\Errored;
 use PHPUnit\Event\Test\ErroredSubscriber;
 use PHPUnit\Event\Test\Failed;
@@ -32,6 +33,16 @@ final class FailureSummaryExtension implements Extension
         Facade $facade,
         ParameterCollection $parameters,
     ): void {
+        try {
+            self::registerSubscribers($facade);
+        } catch (EventFacadeIsSealedException) {
+            // Pest's parallel runner bootstraps extensions once the event facade is sealed:
+            // there is nothing to report from that process, its workers register their own.
+        }
+    }
+
+    private static function registerSubscribers(Facade $facade): void
+    {
         $entries = new stdClass;
         $entries->failures = [];
         $entries->skipped = [];
