@@ -1,15 +1,21 @@
 {
-	"name": "magicoli/pest-failure-summary",
-	"description": "PHPUnit/Pest extension: concise failure and skipped summary after the test run",
-	"version": "1.0.0",
-	"type": "library",
-	"license": "AGPL-3.0-or-later",
-	"autoload": {
-		"psr-4": {
-			"Magicoli\\PestFailureSummary\\": "src/"
-		}
-	},
-	"require": {
-		"phpunit/phpunit": "^10.0 || ^11.0 || ^12.0 || ^13.0"
-	}
+  "name": "magicoli/pest-failure-summary",
+  "description": "PHPUnit/Pest extension: concise failure and skipped summary after the test run",
+  "version": "1.0.1",
+  "type": "library",
+  "license": "AGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Olivier van Helden",
+      "homepage": "https://magiiic.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Magicoli\\PestFailureSummary\\": "src/"
+    }
+  },
+  "require": {
+    "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0 || ^13.0"
+  }
 }
